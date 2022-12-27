@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 
+
+
 function Square(props) {
     return (
         <button className="square" onClick={props.onClick}>
@@ -91,10 +93,10 @@ class Game extends React.Component {
         const moves = history.map((step, move) => {
             const desc = move ?
                 'Go to move #' + move :
-                'Go to game start';
+                'Game start';
             return (
                 <li key={move}>
-                    <button onClick={() => this.jumpTo(move)}>{desc}</button>
+                    <button className='history' onClick={() => this.jumpTo(move)}>{desc}</button>
                 </li>
             );
         });
@@ -103,10 +105,11 @@ class Game extends React.Component {
         if (winner) {
             status = "Winner: " + winner;
         } else {
-            status = "Next player: " + (this.state.xIsNext ? "X" : "O");
+            status = "Your move: " + (this.state.xIsNext ? "X" : "O");
         }
 
         return (
+            <div className="container">
             <div className="game">
                 <div className="game-board">
                     <Board
@@ -117,6 +120,7 @@ class Game extends React.Component {
                 <div className="game-info">
                     <div>{status}</div>
                     <ol>{moves}</ol>
+                </div>
                 </div>
             </div>
         );
