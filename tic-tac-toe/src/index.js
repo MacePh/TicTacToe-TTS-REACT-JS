@@ -1,8 +1,11 @@
+import logo from './logo.svg';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 
 
+
+    
 
 function Square(props) {
     return (
@@ -109,7 +112,14 @@ class Game extends React.Component {
         }
 
         return (
+            
             <div className="container">
+                    <div className="Header">
+                        <header className="TTT-header">
+                            <img src={logo} className="TTT-logo" alt="logo" />
+                            <h1>Tic Tac Toe!</h1>
+                        </header>
+                    </div>
             <div className="game">
                 <div className="game-board">
                     <Board

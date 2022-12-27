@@ -1,4 +1,9 @@
-
+html {
+  background-color: #282c34;
+}
+header{
+  align-items: left;
+}
 body {
   margin: 1ch;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -6,7 +11,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #282c34;
+  /* background-color: #282c34; */
   min-height: 100vh;
   
   display: flex;
@@ -88,4 +93,45 @@ button:hover{
   padding: 1px;
   width: 100px;
   border-radius: 10px;
+}
+.App {
+  text-align: center;
+}
+
+.TTT-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .TTT-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.TTT-header {
+
+  min-height: 0vh;
+  
+  display: grid;
+  grid-template-columns: 120px 120px 120px;
+  justify-items: start;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes TTT-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
